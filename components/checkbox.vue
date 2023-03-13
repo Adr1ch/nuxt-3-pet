@@ -8,7 +8,7 @@
           :value="inputValue"
           :checked="modelValue.includes(inputValue)"
           name=""
-          @change="onChange"
+          v-model="computedValue"
         />
         <span
           class="controll w-30 h-30 relative inline-block transition-all duration-300 rounded-5 mr-20 border-2 border-indigo-500 border-solid"
@@ -62,20 +62,19 @@ const props = defineProps({
       required: true,
     },
     modelValue: {
-      type: Array,
+      type: [Array, Boolean],
       required: true,
     }
 })
 
 const emit = defineEmits(['update:modelValue'])
 
-const onChange = (e) => {
-      let currentValue = [...props.modelValue]
-      if (e.target.checked) {
-        currentValue.push(e.target.value)
-      } else {
-        currentValue = currentValue.filter((item) => item !== e.target.value)
-      }
-      emit('update:modelValue', currentValue)
-}
+const computedValue = computed({
+    get() {
+      return props.modelValue
+    },
+    set(newValue) {
+      emit('update:modelValue', newValue)
+    }
+})
 </script>

@@ -3,13 +3,13 @@
             <template #aside>
                 <div>Product single page
                     <Checkbox
-                        v-model:modelValue="selected"
+                        v-model="selected"
                         label="Choose shoes"
                         input-value="shoes"
                     />
                     <br />
                     <Checkbox
-                        v-model:modelValue="selected"
+                        v-model="selected"
                         label="Choose t-shirt"
                         input-value="t-shirt"
                     />
