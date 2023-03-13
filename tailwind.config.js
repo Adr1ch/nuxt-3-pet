@@ -83,6 +83,7 @@ module.exports = {
       400: '400px',
       450: '450px',
       580: '580px',
+      700: '700px',
     },
     extend: {
       colors: {

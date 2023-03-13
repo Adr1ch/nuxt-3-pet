@@ -1,16 +1,9 @@
 <template>
-    <footer class="footer">
-        <h1>Lorem ipsum amet</h1>
-    </footer>
+    <footer>
+        <div class="container">
+            <div class="pt-30 pb-30">
+                <span class="heading-fifth">Footer</span>
+            </div>
+        </div>
+  </footer>
 </template>
-
-<style>
-.footer {
-    height: 100px;
-    background-color: rgb(181, 181, 181);
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-</style>

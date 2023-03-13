@@ -1,16 +1,24 @@
 <template>
-    <header class="header">
-        <h1>Lorem ipsum amet</h1>
-    </header>
+    <header>
+        <div class="container">
+            <div class="pt-30 pb-30 flex items-center justify-between">
+                <div>
+                    <span class="heading-fifth"> Header custom widget </span>
+                </div>
+                <nav>
+                    <ul class="flex">
+                        <li>
+                            <NuxtLink to="/"> Home page </NuxtLink>
+                        </li>
+                        <li>
+                            <NuxtLink to="/products/lorem-1">Product by slug - lorem-1</NuxtLink>
+                        </li>
+                        <li>
+                            <NuxtLink to="/about"> About page </NuxtLink>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+  </header>
 </template>
-
-<style>
-.header {
-    height: 100px;
-    background-color: rgb(181, 181, 181);
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-</style>
